@@ -16,3 +16,4 @@ the comprehensive syntax is more compact
 Rules: first define the iterator variable, i 
         then write the for loop as usual,
         at the end, use the condition when i should be added to new List '''
+
