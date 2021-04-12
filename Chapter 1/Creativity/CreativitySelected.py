@@ -6,7 +6,8 @@ def main():
     print(distinctItem([2, 2, 3, 4, 6, 88, 78]))
     print(listWithSpecificCondition(10))
     # print(englishLetter())
-    print(randomShuffle(10))
+    print(randomShuffle([2, 2, 3, 4, 6, 88, 78]))
+    print(eofErrorOnInput())  # Try to fix the function.
 
 def oddPair(data):
     '''
@@ -53,7 +54,7 @@ def englishLetter():
     return {i: chr(i) for i in range(97, 123)}
 
 
-def randomShuffle(n):
+def randomShuffle(data):
     '''
     Python’s random module includes a function shuffle(data) that accepts a
     list of elements and randomly reorders the elements so that each possible
@@ -63,7 +64,30 @@ def randomShuffle(n):
     implement your own version of the shuffle function.
     '''
     # --> return a random number within the range
-    k = random.shuffle([2, 2, 3, 4, 6, 88, 78])  
-    return random.randint()
+    for k in range(0, len(data)):
+        random_index = random.randint(0, k)
+        tmp = data[random_index]
+        data[random_index] = data[k]
+        data[k] = tmp
+    return data
+
+# Try to fix the code.
+def eofErrorOnInput():
+    # C-1.21
+    # Write a Python program that repeatedly reads lines from standard input until an EOFError
+    # is raised, and then outputs those lines in reverse order
+    #  (a user can indicate end of input by typing ctrl-D).
+    done = False
+    lines = []
+    
+    # while not done:
+    #     try:
+    #             line = input('Enter text, i shall print it in reversed order, ctrl-d to stop')
+    #             lines.append(line)
+    #     except (EOFError):
+    #         for l in lines:
+    #             print(l)
+    #         done = True
+
 if __name__ == '__main__':
     main()
