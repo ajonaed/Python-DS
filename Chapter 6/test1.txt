@@ -1,0 +1,15 @@
+original order. Exercise C-6.18 explores a solution for this task.
+them into the original stack, they would be reversed again, thereby reverting to their
+from one stack to another, they would be reversed, but if we were to then replace
+the order in which elements are stored within a stack. If we were to move them
+this goal was discussed in Section 4.4.1). A more challenging task is to reverse
+another solution for reversing the contents of a Python list (a recursive solution for
+sequences. For example, Exercise R-6.5 explores the use of a stack to provide yet
+The idea of using a stack to reverse a data set can be applied to other types of
+we ensure that there will be a separating newline in the result.
+(without newline) by the original second-to-last line. In our implementation,
+the lines read from the file in reverse order, then the original last line would be followed
+original file does not have a trailing newline for the final line. If we exactly echoed
+the resulting file. Our reason for doing this is to handle a special case in which the
+from lines as they are read, and then re-insert newlines after each line when writing
+One technical detail worth noting is that we intentionally strip trailing newlines
